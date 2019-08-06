@@ -160,6 +160,7 @@ PING 192.168.106.133 (192.168.106.133) 56(84) bytes of data.
 ```code
 # Enable IP-forwarding.
 echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables --policy FORWARD ACCEPT
 
 # Flush forward rules.
 iptables -P FORWARD DROP
